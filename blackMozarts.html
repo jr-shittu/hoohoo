@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <style>
+        html, body{
+            background: url(bill-wegener-8ldqRkOk5oo-unsplash.jpg), linear-gradient(110deg, #f93d66, #6d47d9);
+            background-position: center center;
+            background-size: cover;
+            color: #fff;
+            font-family: monospace;
+            background-origin: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            display: block;
+            color: #000;
+        }
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 4px;
+            font-size: 2em;
+            padding: 1em;
+        }
+
+        .logo > *{
+            background: #000;
+            color: #fff;
+            padding: .2em
+        }
+
+        .logo a:hover{
+            color: #000;
+            background: #eee;
+            border-bottom: 2px solid yellow;
+        }
+
+        .logo a{
+            text-decoration: none;
+        }
+
+        .nav{
+            position: fixed;
+            right: 0;
+            top: 0;
+            padding: 1em;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .nav li{
+            display: inline-block;
+            list-style-type: none;
+            margin-right: 2em;
+        }
+
+        .nav li > *{
+            background: #ffffff;
+            color: #000;
+            padding: .5em;
+        }
+
+        .nav a:hover{
+            background: #000;
+            color: #fff;
+            border-bottom: 2px solid #ffc600;
+        }
+
+        .nav a{
+            text-decoration: none;
+        }
+
+        form{
+            flex-wrap: wrap;
+            flex: 0 0 30%;
+            order: 1;
+        }
+
+        #topics{
+            flex: 1 1 auto;
+            order: -1;
+        }
+
+        #topics li{
+            list-style-type: none;
+            margin: 2px auto;
+        }
+
+        #topics li > *{
+            background: #eee;
+            color: #000;
+        }
+
+        #topics a:hover{
+            background: #000;
+            color: #fff;
+            border-bottom: 2px solid #ffc600;
+        }
+
+        #topics a{
+            text-decoration: none;
+        }
+
+        #copyleft{
+            flex: 0 0 100%;
+            order: 1;
+            text-align: center;
+        }
+
+        #contact{
+            flex: 0 0 35%;
+        }
+
+        footer{
+            position: absolute;
+            display: flex;
+            background: rgb(39, 37, 37);
+            flex-wrap: wrap;
+            width: 100%;
+            height: 25vh;
+            left: 0;            
+            bottom: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    
+        .btn{
+            background: #ffffff;
+            color: #000;
+            font-family: monospace;
+            padding: 4px;
+            font-weight: bold;
+            font-size: 1.2em;
+            border: none;
+            transition: transform 1s;
+        }
+
+        .btn:hover {
+            background: #000;
+            color: #ffffff;
+            border-bottom: 2px solid #ffc600;
+            transform: scale(1.2);
+        }
+        .icon{
+            display: none;
+        }
+
+        @media (max-width: 900px){
+            .icon{
+                display: block;
+                position: absolute;
+                background: #eee;
+                color: #000;
+                top: 25px;
+                right: 30px;
+                padding: 1em;
+                border: none;
+            }
+            .logo{
+                font-size: 1.5em;
+            }
+            .icon:hover {
+                background: #000;
+                color: #f93d66;
+                border: 2px solid #6d47d9;
+        }
+
+            .icon.active{
+                transform: translateX(-143px);
+            }
+
+            .nav{
+                transform: translateX(100%);
+            }
+
+            .nav.active{
+                transform: translateX(0);
+                font-size: 1.1em;
+                right: 0;
+            }
+
+            .nav li{
+                display: block;
+                margin: 0 0 2em 0;
+        }
+       
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><b>Black<span style="color: #f93d66">_m0zArts</span><span style="color: #dfbf0e;">/></span></b></a>
+        </div>
+
+        <button class="icon">
+            &#9776;
+        </button>
+
+        <ul class="nav">
+            <li><a href="#">Apps and Resources</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">STEM Contest</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Become a Donor</a></li>
+        </ul>
+    </header>
+    <main>
+        <button class="btn" type="submit">Click to get Involved</button>
+    </main>
+
+    <footer class="flex align-top wrap">
+
+        <!--Search form-->
+        <form class="flex wrap">
+            <label for="Search">
+                Search this Site
+            </label>
+            <p class="flex same-height">
+                <input type="search">
+                <button type="submit">Search</button>
+            </p>
+        </form>
+
+        <!--Topics-->
+        <section id="topics">
+            <h2>Gists</h2>
+            <ul class="taglist">
+                <li><a href="#">Holla</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Info and Updates</a></li>
+            </ul>
+        </section>
+
+        <!--Contact-->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Blvck m0zArts <br>122 MFM Tanke<br>Aljazeerah Lodge<br>Ilorin, Kwara State</p>
+        </section>
+
+        <!--Copyrights-->
+        <p id="copyleft"><b>&copy;</b>2021. All rights reserved</p>
+    </footer>
+
+    <script>
+        const nav = document.querySelector(".nav");
+        const icon = document.querySelector(".icon");
+        
+        icon.addEventListener("click", function(){
+            nav.classList.toggle("active");
+            icon.classList.toggle("active");
+        })
+    </script>
+    
+</body>
+</html>
